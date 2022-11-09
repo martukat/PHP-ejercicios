@@ -1,0 +1,25 @@
+<?php
+
+// here, change the number you want
+$number = 2;
+
+function calcFact(int $number){
+    
+    $factorial = 1; //counter
+    // check if argument $number is valid
+    if ($number >= 0){
+        /*to multiply the number by the same number, there must be a decrement
+        because the number is going to be decresing and multiplying by itself
+        */
+        for($i = $number; $i > 1; $i--) {
+            $factorial = $factorial * $i;
+        }
+        return $factorial;
+    } else if ($number <= 0){
+        return -1;
+    }
+    }
+
+    echo 'The factorial (n!) of: ' .$number. ' is: ' .calcFact($number);
+
+?>
