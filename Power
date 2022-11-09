@@ -1,0 +1,21 @@
+<?php
+
+function calcPow(int $base, int $exponent = 2){
+    $power = 1; // save the result of the operation
+    $exponent1 = $exponent; // create a "duplicate" to not decrement the exponent
+    
+    // check there are not negative numbers
+    while ($exponent1 > 0){
+        $power *= $base;
+        $exponent1--;
+    }
+    echo "The: $base raised to the power of: $exponent is equals to: $power \n";
+}
+
+calcPow(3, ); //here it calculates by the default power
+calcPow(3, 0);
+calcPow(4, 2);
+calcPow(); // it launchs fatal error
+calcPow(2, 6);
+
+?>
